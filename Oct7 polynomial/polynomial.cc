@@ -48,7 +48,7 @@ Polynomial Polynomial::multiplication(Polynomial b) {
 			c.coef[i+j] += (a.coef[i] * b.coef[j]);
 		}
 	}
-	c.deg = c.getDegree();
+	c.deg = c.getDegree(); // I think that we still have to group the coefficients afterwards.
 	return c;
 }
 
