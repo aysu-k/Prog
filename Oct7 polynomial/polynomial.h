@@ -1,27 +1,29 @@
-#ifndef POLYNOMIAL_H
-#define POLYNOMIAL_H
+#pragma once
 
 #include <iostream>
+#include <vector>
+
+using namespace std;
 
 class Polynomial {
-	
+
 public:
 
 	Polynomial();
-	Polynomial(double coefficient, int dgr);
+	Polynomial(vector<double> coefficient, int degree) // @suppress("Class members should be properly initialized")
+	{
+		vector<double> coeff(100);
+	}
 
 	int getDegree();
-	Polynomial addition(Polynomial b);
-	Polynomial multiplication(Polynomial b);
+	Polynomial addition(Polynomial a, Polynomial b);
+	Polynomial multiplication(Polynomial a, Polynomial b);
 	void print();
 
 
 	private:
 
-	int degree;
+	int dgr;
 	vector<double> coeff;
 
 };
-
-
-#endif POLYNOMIAL_H
