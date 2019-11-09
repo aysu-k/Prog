@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<landscape name="domotique">
+
+	<zone name="living room" ID="1">
+
+		<Description>Living room that has to stay cozy.</Description>
+
+		<phenomenon name="Temperature" type="sinus">
+			<param offset="12" ampl="7.5" period="1440.0" />
+		</phenomenon>
+
+		<state name="temperature livingroom"/>
+
+		<control1 name="simple" type="on-off"/>
+
+		<control2 name="advanced" type="proportional"/>
+
+	</zone>
+
+	<zone name="aquarium" ID="2">
+
+		<Description>Aquarium is full of fish that have to breath.</Description>
+
+		<phenomenon name="pH of the environment" type="intervals">
+			<param interval="1" begin="0" end="300" slope="0" offset="10"/>
+			<param interval="2" begin="301" end="400" slope="6" offset="10"/>
+			<param interval="3" begin="401" end="700" slope="0" offset="50"/>
+			<param interval="4" begin="701" end="1000" slope="-5.5" offset="50"/>	
+		</phenomenon>	
+
+		<state name="pH_of_aquarium"/>
+
+		<control name"oxygen_pump" type="proportional"/>
+
+	</zone>
+
+</landscape>

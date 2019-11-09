@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<landscape name="domotique">
+
+	<zone name="living room" ID="1">
+
+		<Description>Living room that has to stay cozy.</Description>
+
+		<phenomenon name="Temperature" type="boh">
+			<param min_value="10" max_value="40" />
+		</phenomenon>
+
+		<state name="air"/>
+			<param current_state="boh" i_phen="boh" i_cntrl="boh"/>
+
+		<control name="heater"/>
+			<param saturatio value="boh"/>
+
+	</zone>
+
+	<zone name="aquarium" ID="2">
+
+		<Description>Aquarium is full of fish that have to breath.>
+
+		<phenomenon name="pH of the environment" type="intervals">
+			<param min_value="10" max_value="40" />
+		</phenomenon>	
+
+		<state name="pH_of_aquarium"/>
+		<param current_state="boh" i_phen="boh" i_cntrl="boh"/>
+
+		<control name"oxygen_pump"/>
+			<param saturatio value="boh"/>
+	</zone>
+
+</landscape>
